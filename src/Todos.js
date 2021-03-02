@@ -31,6 +31,7 @@ function Todos(){
             </div>
             <div className="task-wrap">
                 <div className="task-list">
+                    <h3>On The List</h3>
                     {
                             tasks.map(task => {
                                 const {id, taskText} = task
@@ -39,7 +40,9 @@ function Todos(){
                     }
                     
                 </div>
-                    <div className="completed-list">{
+                    <div className="completed-list">
+                          <h3>Completed!</h3>  
+                        {
                         completedTasks.map(task => {
                             const {id, taskText} = task
 

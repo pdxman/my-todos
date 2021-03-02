@@ -103,6 +103,7 @@ button {
   display: flex;
   max-width: 40em; 
   margin: 0 auto; 
+  padding-top: 3em; 
 }
 .task-list {
   cursor: pointer;
@@ -132,6 +133,9 @@ button {
 .Jobs {
   text-align: left;
 }
-input { background: #fff; border-radius: 25px; border: none; height: 3em;  margin-right: 1em; }
+input { background: #fff; border-radius: 25px; border: none; height: 3em;  margin-right: 1em; padding-left: 2em; }
 
 button { border-radius: 25px; width: 5em; border: none; height: 3.75em; margin-left: 1em; }
+
+.task-list p { background: orangered; padding: 1em; border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a; font-weight: bold; text-transform: uppercase; margin-right: 1em;   }
+.completed-list p{ background: rgba(131,58,180,1); padding: 1em; border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a; font-weight: bold; text-transform: uppercase; ;  }
