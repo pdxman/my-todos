@@ -133,9 +133,28 @@ button {
 .Jobs {
   text-align: left;
 }
+
+@keyframes pulse {
+  0% { opacity: 0; transform: scale(1); }
+  90% { opacity: 1; transform: scale(1.1); }
+  100% {opacity: 0; transform: scale(1.25); }
+}
+
 input { background: #fff; border-radius: 25px; border: none; height: 3em;  margin-right: 1em; padding-left: 2em; }
 
 button { border-radius: 25px; width: 5em; border: none; height: 3.75em; margin-left: 1em; }
 
 .task-list p { background: orangered; padding: 1em; border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a; font-weight: bold; text-transform: uppercase; margin-right: 1em;   }
-.completed-list p{ background: rgba(131,58,180,1); padding: 1em; border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a; font-weight: bold; text-transform: uppercase; ;  }
+.completed-list p{ z-index: 10; transition: all 1s ease; position: relative; background: rgba(131,58,180,1); padding: 1em; border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a; font-weight: bold; text-transform: uppercase; ;  }
+.completed-list p:before { 
+  content: ''; 
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(131,58,180,1);
+  opacity: 0; 
+  animation: pulse 1s ease infinite; 
+  z-index: -1;
+  border-radius: 15px; box-shadow: 2px 5px 5px #1a1a1a;  }
